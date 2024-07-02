@@ -7,7 +7,7 @@ export default function App() {
   const [movies, setMovies] = useState([]);
   const [page, setPage] = useState(1);
   const [totalPage, setTotalPage] = useState(0);
-
+   
   useEffect(() => {
     if (search.trim() === "") {
       return;
@@ -30,7 +30,7 @@ export default function App() {
   console.log(movies);
   return (
     <div>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.APP_URL}>
         <Routes>
           <Route
             path="/"
