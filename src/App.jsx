@@ -30,7 +30,7 @@ export default function App() {
   console.log(movies);
   return (
     <div>
-      <BrowserRouter basename={process.env.APP_URL}>
+      <BrowserRouter>
         <Routes>
           <Route
             path="/"
